@@ -94,6 +94,40 @@ end
 --
 
 if Settings.Safetrain.SafeAll == true then
+    
+    while task.wait() do
+       local args = {
+    [1] = {
+        [1] = "Add_FS_Request"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = "+BT1"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+       local args = {
+    [1] = {
+        [1] = "Add_MS_Request"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = "Add_JF_Request"
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
                 
      local s = setmetatable({}, {
         __index = function(self, serv)
